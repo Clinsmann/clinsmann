@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import 'variables';
+@import "../css/bootstrap.min.css";
+@import "../css/now-ui-kit.css";
+
+.profile-page h5.description {
+  max-width : 70rem;
+}
+
+nav {
+  i, svg {
+    font-size : 20px;
+  }
+}
+
+.follow {
+  i, svg {
+    font-size   : 1.5rem;
+    line-height : 3.4rem;
+  }
+}
+
+.education {
+  .nav-pills .nav-item .nav-link {
+    padding     : 10px 23px;
+    min-width   : 100px;
+    font-weight : 400;
+    text-align  : center;
+    color       : #444;
+    width       : auto;
+    height      : auto;
+  }
+
+  .nav-pills.flex-column li > a {
+    margin-bottom : 15px;
+  }
+  h5 {
+    font-weight : 300;
+  }
+  a {
+    font-size : 1.1rem;
+  }
+}
+
+.nav-pills .nav-item .nav-link {
+  margin : 0 15px;
+}
+
+.badge {
+  padding       : 7px 15px;
+  font-size     : .85rem;
+  margin-bottom : 10px;
+  border-radius : 1.5rem;
+  font-weight   : 500;
+}
+
+#portfolio {
+  .project {
+    position           : relative;
+    border-radius      : 4px;
+    margin-bottom      : 30px;
+    overflow           : hidden;
+    -webkit-box-shadow : 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+    box-shadow         : 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+    &:hover {
+      .overlay {
+        background-color : rgba(0, 0, 0, .75);
+      }
+      .site-caption,.preview{
+        color      : rgba(255,255,255,1);
+      }
+      .site-caption {
+        top : 40%;
+      }
+      .preview {
+        top : 60%;
+      }
+      img{
+        transform: scale(1.15);
+      }
+    }
+  }
+  img {
+    position      : relative;
+    margin-bottom : 0;
+    transition: all .8s;
+  }
+  .overlay {
+    position         : absolute;
+    height           : 100%;
+    width            : 100%;
+    background-color : rgba(0, 0, 0, 0);
+    transition       : all .4s;
+    z-index          : 1;
+  }
+  .site-caption, .preview {
+    position   : absolute;
+    top        : 50%;
+    transform  : translate(-50%, -50%);
+    color      : rgba(255,255,255,.05);
+    left       : 50%;
+    z-index    : 2;
+    transition : all .4s;
+    width : 100%;
+    text-align: center;
+    padding: 0 3rem;
+    text-decoration: none;
+  }
+  .site-caption{
+    font-weight: 500;
+  }
+  .preview {
+    top : 120%;
+  }
+}
