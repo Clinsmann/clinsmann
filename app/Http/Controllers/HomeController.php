@@ -16,7 +16,7 @@ class HomeController extends Controller
     {
 
 
-        $cart = new ShoppingCart;
+        /*$cart = new ShoppingCart;
         $cart->addItem('singlet',50,10000);
         $cart->addItem('bags',50,10000);
         $cart->addItem('shoes',100,10000);
@@ -26,7 +26,7 @@ class HomeController extends Controller
 
 
 
-        return;
+        return;*/
 
 
 
