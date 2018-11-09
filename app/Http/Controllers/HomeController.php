@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\helpers\ShoppingCart;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,6 +14,22 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+
+        $cart = new ShoppingCart;
+        $cart->addItem('singlet',50,10000);
+        $cart->addItem('bags',50,10000);
+        $cart->addItem('shoes',100,10000);
+        $cart->removeItem('shoes',50,10000);
+
+        dd($cart->items, $cart->netTotal, $cart->deliveryFee, $cart->grossTotal, $cart->checkout(77000000));
+
+
+
+        return;
+
+
+
         $sites = [
             [
                 'name' => 'Aqua Rapha Investment',
